@@ -18,8 +18,23 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.header {
+  font-size: 40px;
 }
 
+.logo {
+  width: 80px;
+  height: auto;
+}
+main {
+  background: white;
+  width: 450px;
+  min-height: 400px;
+  margin: 140px auto;
+  /* position: absolute; */
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

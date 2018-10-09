@@ -1,0 +1,16 @@
+nav {
+    background-color: #00A087;
+    padding: 10px 2em;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: 0;
+}
+
+
+#nav-bar .header {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 15px 0;
+    color: #E8FDFF;
+}
