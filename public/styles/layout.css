@@ -8,6 +8,7 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  
 }
 
 /*
@@ -31,13 +32,83 @@ body {
 main {
   background: white;
   width: 450px;
-  min-height: 400px;
   margin: 140px auto;
   /* position: absolute; */
+
 }
 .new-tweet {
   background-color: lightgrey
 }
+.tweet-container {
+  border-radius: 8px;
+  margin: 15px;
+  background-color: #ffffff;
+  border: solid 1px #d3d3d3;
+}
+.tweet-container header {
+  background-color: #d3d3d3;
+  width: 100%;
+  height: 80px;
+  border-radius: 0;
+  padding: 10px
+}
+  .tweet-container .header-text {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px;
+    margin-top: 12px;
+    display: block;
+    display: inline-block;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+
+.tweet-container .body  {
+  width: 100%;
+  /* margin: 20px auto; */
+  padding-left: 20px;
+  height: 75px;
+  margin-bottom: 0px;
+  border-bottom: solid 1px gray;
+}
+
+.tweet-container a {
+  display: inline;
+  float: right;
+  margin-top: 10px;
+}
+.tweet-container .avatar {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(2, 14, 14);
+  display: inline-block;
+  padding: 10px;
+  float: left;
+  border-radius: 5px;   
+}
+.tweet-container .social {
+  float:right;
+  display: none;
+} 
+.tweet-container:hover .social {
+  display: block;
+
+}
+.tweet-container:hover {
+ border: solid 1px black;
+}
+footer{
+  padding: 10px;
+}
+
+footer p {
+  display: inline;
+  
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
