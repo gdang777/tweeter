@@ -14,3 +14,16 @@ nav {
     margin: 15px 0;
     color: #E8FDFF;
 }
+#nav-bar button {
+    float: right;
+    height: 45px;
+    margin-top: 8px;
+    border-radius: 8px;
+    opacity: .6;
+
+}
+#nav-bar button:hover {
+    opacity: 1;
+
+    
+}
