@@ -43,10 +43,11 @@ main {
   border: solid 1px #d3d3d3;
 }
 .tweet-container header {
-  background-color: #d3d3d3;
+  background-color: #f3f3f3;
   width: 100%;
   height: 80px;
-  border-radius: 0;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   padding: 10px
 }
   .tweet-container .header-text {
@@ -70,6 +71,7 @@ main {
   height: 75px;
   margin-bottom: 0px;
   border-bottom: solid 1px gray;
+  word-break: break-word;
 }
 
 .tweet-container a {

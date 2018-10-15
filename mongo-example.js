@@ -15,7 +15,6 @@ MongoClient.connect(MONGODB_URI, (err,db) => {
             console.log("Cannot find");
             throw err;
         }
-    
         // results.toArray((err, resultsArray) => {
         //     if (err) throw err;
             console.log("results.toArray:", results);

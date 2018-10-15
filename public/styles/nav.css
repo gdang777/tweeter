@@ -1,5 +1,5 @@
 nav {
-    background-color: #00A087;
+    background-color:#00A087;
     padding: 10px 2em;
     position: fixed;
     height: 80px;
@@ -12,7 +12,7 @@ nav {
     display: inline-block;
     vertical-align: bottom;
     margin: 15px 0;
-    color: #E8FDFF;
+    color: rgb(232, 225, 225);
 }
 #nav-bar button {
     float: right;
@@ -25,5 +25,5 @@ nav {
 #nav-bar button:hover {
     opacity: 1;
 
-    
+   
 }

@@ -1,8 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+
 $(document).ready(function(){
 
     function loadTweets(){
@@ -26,7 +22,7 @@ $(document).ready(function(){
     
     function createTweetElement(tweetData){
         const userName = tweetData.user.name;
-        const avatar = tweetData.user.avatars["regular"];
+        const avatar = tweetData.user.avatars["large"];
         const handle = tweetData.user.handle;
         const content = tweetData.content.text;
         const time = moment(tweetData.created_at).fromNow();
@@ -57,7 +53,7 @@ $(document).ready(function(){
             createTweetElement(tweet).prependTo('.old-tweets')
         });
     }    
-    //ajax call
+    //------------ajax call
     const tweetSubmit = $('#tweetsubmit');
     
     tweetSubmit.submit(function(event){
@@ -67,12 +63,12 @@ $(document).ready(function(){
         console.log("the button was clicked");
         $('.error').slideUp();
         if(theTweet === "" ){
-            $('.error').text("Error:cannot leave the tweet empty").slideDown();
-            // return;
+            $('.error').text("Error: Cannot leave the tweet empty").slideDown();
+            return;
         }
          if(theTweet.length > 140){
-            $('.error').text("too many characters").slideDown();
-            // return;
+            $('.error').text("Too many Characters").slideDown();
+            return;
         }
             $.ajax({
                 type: ('POST'),
@@ -80,18 +76,20 @@ $(document).ready(function(){
                 data: tweetSubmit.serialize(),
                 success: function (data) {
                     console.log('Submission was successful.');
-                    console.log(data);
-                    loadTweets();
+                    // console.log(data);
+                    loadTweets(data);
                 },
                 error: function (data) {
                     console.log('An error occurred.');
-                    console.log(data);
+                    // console.log(data);
                 }
+            }).then(() => {
+                $('textarea[name=text]').val('');
+                $('.counter').text(140);
             });   
     });
     $('button').click(function(){
         $('.new-tweet').slideToggle();
         $('textarea').focus();
     })
-
 });
